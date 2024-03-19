@@ -8,8 +8,8 @@ import (
 	"os/signal"
 	"time"
 
-	"github/axibord/heimerdinger/internal/domain/middlewares"
-	"github/axibord/heimerdinger/internal/web/pages"
+	"github/axibord/ezreal/internal/domain/middlewares"
+	"github/axibord/ezreal/internal/web/pages"
 
 	"github.com/a-h/templ"
 	"github.com/labstack/echo/v4"
@@ -72,7 +72,7 @@ func main() {
 	e.GET("/", func(ctx echo.Context) error {
 		return ctx.JSON(http.StatusOK, map[string]string{
 			"status":  "success",
-			"message": "Build your dream app with Heimerdinger!",
+			"message": "Build your dream app with Ezreal!",
 		})
 	})
 

@@ -1,4 +1,4 @@
-module github/axibord/heimerdinger
+module github/axibord/ezreal
 
 go 1.22.1
 

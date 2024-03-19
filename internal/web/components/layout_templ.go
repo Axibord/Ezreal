@@ -10,7 +10,7 @@ import "context"
 import "io"
 import "bytes"
 
-import m "github/axibord/heimerdinger/internal/domain/middlewares"
+import m "github/axibord/ezreal/internal/domain/middlewares"
 
 func header(title string) templ.Component {
 	return templ.ComponentFunc(func(ctx context.Context, templ_7745c5c3_W io.Writer) (templ_7745c5c3_Err error) {

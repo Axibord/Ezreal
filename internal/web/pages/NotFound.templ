@@ -1,0 +1,9 @@
+package pages
+
+import "github/axibord/heimerdinger/internal/web/components"
+
+templ NotFound() {
+	@components.Layout("404") {
+		@components.NotFound()
+	}
+}

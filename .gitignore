@@ -1,0 +1,58 @@
+bin
+tmp
+
+tailwindcss.exe
+tailwindcss
+
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+
+# Folders
+_obj
+_test
+
+# Architecture specific extensions/prefixes
+*.[568vq]
+[568vq].out
+
+*.cgo1.go
+*.cgo2.c
+_cgo_defun.c
+_cgo_gotypes.go
+_cgo_export.*
+
+_testmain.go
+
+*.exe
+*.test
+*.prof
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+
+# IDEs
+.idea/
+*.iml
+
+# Log files
+*.log
+
+# Node modules for TailwindCSS
+node_modules/
+
+# Dist folder for TailwindCSS
+dist/
+
+# .DS_Store for MacOS
+.DS_Store
+
+# Temp files
+*.tmp
+*.temp
+*.swp
+*.swo

@@ -1,0 +1,41 @@
+package components
+
+import m "github/axibord/heimerdinger/internal/domain/middlewares"
+
+templ header(title string) {
+	<head>
+		<title>{ title }</title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<script src="static/script/htmx.min.js" nonce={ ctx.Value(m.HtmxNonceKey).(string) }></script>
+		<script src="static/script/response-targets.js" nonce={ ctx.Value(m.ResponseTargetsNonceKey).(string) }></script>
+		<link rel="stylesheet" href="static/css/style.css" nonce={ ctx.Value(m.TwNonceKey).(string) }/>
+	</head>
+}
+
+templ footer() {
+	<footer class="bg-green-700 p-4">Footer</footer>
+}
+
+templ nav() {
+	<nav class="bg-blue-700 p-4 flex space-x-7">
+		<a class="text-gray-200" href="/">Home</a>
+		<a class="text-gray-200" href="/register">Register</a>
+		<a class="text-gray-200" href="/login">Login</a>
+		<a class="text-gray-200" href="/about">About</a>
+	</nav>
+}
+
+templ Layout(title string) {
+	<!DOCTYPE html>
+	<html lang="en">
+		@header(title)
+		<body class="flex flex-col h-full min-h-screen bg-gray-800">
+			@nav()
+			<main class="flex-1">
+				{ children... }
+			</main>
+		</body>
+		@footer()
+	</html>
+}
